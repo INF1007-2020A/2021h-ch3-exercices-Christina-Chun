@@ -4,32 +4,36 @@
 
 import math
 
-def square_root(a: float) -> float:
-    return math.sqrt(a)
-
+def square_root(a: float) -> float:              #a est nb a virg flottante (float) et reponse aussi
+    return math.sqrt(a)                          #peut aussi: racine_carree = math.sqrt(a)
+                                                 #                   return racine_carree
 
 def square(a: float) -> float:
-    return 0.0
+    return a ** 2                                #ou pow(a,2)
 
 
 def average(a: float, b: float, c: float) -> float:
-    return 0.0
+    moyenne = (a,b,c)
+    return sum(moyenne)/len(moyenne)  #can i do that?      #ou return sum([a,b,c])/3  crochets c une liste
 
 
 def to_radians(angle_degs: float, angle_mins: float, angle_secs: float) -> float:
-    return 0.0
+    return math.radians(angle_degs + angle_mins/60 + angle_secs/3600)       #One minute is equal to 1/60 degrees, One second is equal to 1/3600 degrees
 
 
 def to_degrees(angle_rads: float) -> tuple:
-    return 0.0, 0.0, 0.0
+    degres = math.degrees(angle_rads)
+    min = (degres-math.floor(degres))*60             #on veut les decimales pour les min et sec, floor:rounds a number DOWN to the nearest integer VS ceil
+    sec = (min-math.floor(min))*60
+    return math.floor(degres), math.floor(min), sec
 
 
-def to_celsius(temperature: float) -> float:
-    return 0.0
+def to_celsius(temperature: float) -> float:           #(°F – 32) x 5/9 = °C
+    return (temperature - 32)*(5/9)
 
 
 def to_farenheit(temperature: float) -> float:
-    return 0.0
+    return temperature*(5/9) - 32
 
 
 def main() -> None:
