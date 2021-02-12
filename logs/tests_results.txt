@@ -1,29 +1,10 @@
 test_average (__main__.TestExercice) ... ok
 test_square (__main__.TestExercice) ... ok
 test_square_root (__main__.TestExercice) ... ok
-test_to_celsius (__main__.TestExercice) ... FAIL
+test_to_celsius (__main__.TestExercice) ... ok
 test_to_degrees (__main__.TestExercice) ... FAIL
-test_to_farenheit (__main__.TestExercice) ... FAIL
+test_to_farenheit (__main__.TestExercice) ... ok
 test_to_radians (__main__.TestExercice) ... ok
-
-======================================================================
-FAIL: test_to_celsius (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 98, in test_to_celsius
-    'Mauvais calcul de farenheit -> celsius'
-AssertionError: Lists differ: [-17.77777777777778, -31.666666666666668, 232.7777777777778] != [-17.77777777777778, -31.666666666666664, 232.77777777777777]
-
-First differing element 1:
--31.666666666666668
--31.666666666666664
-
-- [-17.77777777777778, -31.666666666666668, 232.7777777777778]
-?                                        ^                  ^
-
-+ [-17.77777777777778, -31.666666666666664, 232.77777777777777]
-?                                        ^                  ^^
- : Mauvais calcul de farenheit -> celsius
 
 ======================================================================
 FAIL: test_to_degrees (__main__.TestExercice)
@@ -46,24 +27,7 @@ First differing element 0:
 +  (257.74504364071475, -15.297381557114704, 44.031235481811564),
 +  (213.95544569810457, -2.673258113725865, 23.057550624127998)] : Mauvais calcul de radians -> degres
 
-======================================================================
-FAIL: test_to_farenheit (__main__.TestExercice)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 110, in test_to_farenheit
-    'Mauvais calcul de celsius -> farenheit'
-AssertionError: Lists differ: [32.0, -13.0, 843.8] != [32.0, -13.0, 843.8000000000001]
+Ran 7 tests in 0.001s
 
-First differing element 2:
-843.8
-843.8000000000001
-
-- [32.0, -13.0, 843.8]
-+ [32.0, -13.0, 843.8000000000001]
-?                    ++++++++++++
- : Mauvais calcul de celsius -> farenheit
-
-----------------------------------------------------------------------
-Ran 7 tests in 0.002s
-
-FAILED (failures=3)
+FAILED (failures=1)
