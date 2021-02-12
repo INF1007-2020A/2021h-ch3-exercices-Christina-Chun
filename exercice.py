@@ -22,10 +22,10 @@ def to_radians(angle_degs: float, angle_mins: float, angle_secs: float) -> float
 
 
 def to_degrees(angle_rads: float) -> tuple:
-    degres = math.degrees(angle_rads)
-    min = (degres-math.floor(degres))*60             #on veut les decimales pour les min et sec, floor:rounds a number DOWN to the nearest integer VS ceil
-    sec = (min-math.floor(min))*60
-    return math.floor(degres), math.floor(min), sec
+    degrees = math.degrees(angle_rads)
+    min = (degrees - math.floor(degrees)) * 60    #on veut les decimales pour les min et sec, floor:rounds a number DOWN to the nearest integer VS ceil
+    sec = (min - math.floor(min)) * 60
+    return math.floor(degrees), math.floor(min), sec
 
 
 def to_celsius(temperature: float) -> float:           #(°F – 32) x 5/9 = °C
@@ -33,7 +33,7 @@ def to_celsius(temperature: float) -> float:           #(°F – 32) x 5/9 = °C
 
 
 def to_farenheit(temperature: float) -> float:
-    return temperature*(5/9) - 32
+    return temperature/(5/9) + 32
 
 
 def main() -> None:
