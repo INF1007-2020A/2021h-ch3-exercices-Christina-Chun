@@ -14,7 +14,7 @@ def square(a: float) -> float:
 
 def average(a: float, b: float, c: float) -> float:
     moyenne = (a,b,c)
-    return sum(moyenne)/len(moyenne)  #can i do that?      #ou return sum([a,b,c])/3  crochets c une liste
+    return sum(moyenne)/len(moyenne)                #can i do that?      #ou return sum([a,b,c])/3  crochets c une liste
 
 
 def to_radians(angle_degs: float, angle_mins: float, angle_secs: float) -> float:
